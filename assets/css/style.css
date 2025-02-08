@@ -430,7 +430,7 @@ a {
   transition: all 0.3s ease;
 }
 a:hover {
-  color: #007aff;
+  color: #FF5C35;
 }
 
 button {
@@ -495,7 +495,7 @@ kbd {
 }
 
 a:hover {
-  color: #007aff;
+  color: #FF5C35;
 }
 
 ul {
@@ -845,12 +845,12 @@ ul {
 
 .tm_accent_color,
 .tm_accent_color_hover:hover {
-  color: #007aff;
+  color: #FF5C35;
 }
 
 .tm_accent_bg,
 .tm_accent_bg_hover:hover {
-  background-color: #007aff;
+  background-color: #FF5C35;
 }
 
 .tm_accent_bg_10 {
@@ -915,7 +915,7 @@ ul {
 }
 
 .tm_accent_border {
-  border-color: #007aff;
+  border-color: #FF5C35;
 }
 
 .tm_accent_border_10 {
@@ -1895,7 +1895,7 @@ hr {
   }
   .tm_invoice_btn.tm_color1 {
     background-color: rgba(0, 122, 255, 0.1);
-    color: #007aff;
+    color: #FF5C35;
     border-radius: 5px 5px 0 0;
   }
   .tm_invoice_btn.tm_color1:hover {
@@ -1967,7 +1967,7 @@ hr {
   }
   .tm_invoice_btn.tm_color1 {
     background-color: rgba(0, 122, 255, 0.1);
-    color: #007aff;
+    color: #FF5C35;
   }
   .tm_invoice_btn.tm_color1:hover {
     background-color: rgba(0, 122, 255, 0.2);
@@ -2322,7 +2322,7 @@ hr {
     -webkit-print-color-adjust: exact;
   }
   .tm_accent_bg {
-    background-color: #007aff;
+    background-color: #FF5C35;
     -webkit-print-color-adjust: exact;
   }
   .tm_accent_bg_10 {
@@ -2338,7 +2338,7 @@ hr {
     -webkit-print-color-adjust: exact;
   }
   .tm_accent_color {
-    color: #007aff !important;
+    color: #FF5C35 !important;
     -webkit-print-color-adjust: exact;
   }
   .tm_ternary_color {

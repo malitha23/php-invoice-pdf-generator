@@ -75,8 +75,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'PUT' && isset($_GET['invoice_id']) && isset(
     $invoiceId = $_GET['invoice_id'];
     $itemIndex = $_GET['item_index'];
     $updatedItem = json_decode(file_get_contents('php://input'), true);
-    $description = $updatedItem['description']; // "App Development"
-    $details = $updatedItem['details'];         // "Android & iOS Application Development"
+    $Item = $updatedItem['Item']; // "App Development"
+    $Description = $updatedItem['Description'];         // "Android & iOS Application Development"
     $total_price = $updatedItem['total_price'];
 
     $invoice = getInvoiceById($invoiceId);
@@ -84,8 +84,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'PUT' && isset($_GET['invoice_id']) && isset(
 if ($invoice) {
     // Update the item at the specified index
     if (isset($invoice['items'][$itemIndex])) {
-        $invoice['items'][$itemIndex]['description'] = $description;
-        $invoice['items'][$itemIndex]['details'] = $details;
+        $invoice['items'][$itemIndex]['Item'] = $Item;
+        $invoice['items'][$itemIndex]['Description'] = $Description;
         $invoice['items'][$itemIndex]['total_price'] = $total_price;
 
         // Recalculate the total amount
@@ -120,16 +120,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE' && isset($_GET['invoice_id']) && iss
     if (is_array($invoice) && isset($invoice['items']) && is_array($invoice['items'])) {
         // Check if the item index is valid
         if (isset($invoice['items'][$itemIndex])) {
-            // Debugging: output the item before deletion
-            echo 'Item to delete: ';
-            var_dump($invoice['items'][$itemIndex]);
-
+           
             // Remove the item at the given index
             array_splice($invoice['items'], $itemIndex, 1);
-
-            // Debugging: output the items after deletion
-            echo 'Items after deletion: ';
-            var_dump($invoice['items']);
 
             // Recalculate the total amount
             $totalAmount = 0;
