@@ -1,0 +1,38 @@
+{
+    "invoice_id": 1,
+    "invoice_number": "LL937847",
+    "invoice_date": "2025-01-10",
+    "tax": "10",
+    "currencyFormat": "$",
+    "invoice_to": {
+        "name": "Lowell H. Dominguez",
+        "address": "84 Spilman Street, London",
+        "country": "United Kingdom",
+        "email": "lowell@gmail.com"
+    },
+    "payment_method": "Paypal, Western Union",
+    "total_amount": 4350,
+    "items": [
+        {
+            "description": "Website Designer",
+            "details": "Six web page designs and three times revision",
+            "unit_price": 350,
+            "quantity": 1,
+            "total_price": 1750
+        },
+        {
+            "description": "Web Development",
+            "details": "Convert pixel-perfect frontend and make it dynamic",
+            "unit_price": 600,
+            "quantity": 1,
+            "total_price": 600
+        },
+        {
+            "description": "App Development",
+            "details": "Android & iOS Application Development",
+            "unit_price": 200,
+            "quantity": 2,
+            "total_price": 2000
+        }
+    ]
+}
