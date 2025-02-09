@@ -1,6 +1,9 @@
 <?php
-    header("Cache-Control: no-cache, must-revalidate");
-    header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+header('Cache-Control: no-cache');
+header('Pragma: no-cache');
+header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+header('X-Frame-Options: SAMEORIGIN'); // Prevents embedding on external sites
+
 ?>
 
 <!DOCTYPE html>
@@ -97,12 +100,13 @@
     </div>
     <!-- Iframe Section -->
     <div class="containerIframe">
-        <iframe src="../general_3.html" class="responsive-iframe" id="myIframe"></iframe>
+        <iframe src="../general_3.php" class="responsive-iframe" id="myIframe"></iframe>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../assets/js/invoiceManager.js"></script>
     <script src="../assets/js/invoiceItemsManager.js"></script>
+
 </body>
 
 </html>

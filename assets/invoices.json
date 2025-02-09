@@ -2,8 +2,8 @@
     "invoice_id": 1,
     "invoice_number": "LL937841",
     "invoice_date": "2025-02-06",
-    "tax": "10",
-    "currencyFormat": "Rs",
+    "tax": "0",
+    "currencyFormat": "$",
     "invoice_to": {
         "name": "Lowell H. Domingueza",
         "address": "84 Spilman Street, Londo",
@@ -11,7 +11,7 @@
         "email": "lowel@gmail.com"
     },
     "payment_method": "Paypal, Western Union",
-    "total_amount": 2175,
+    "total_amount": 385,
     "items": [
         {
             "Item": "Website Designer",
@@ -25,7 +25,14 @@
             "Description": "Android & iOS Application Development",
             "unit_price": 200,
             "quantity": 2,
-            "total_price": 2000
+            "total_price": 200
+        },
+        {
+            "Item": "e",
+            "Description": "e",
+            "unit_price": 1,
+            "quantity": 1,
+            "total_price": 10
         }
     ]
 }

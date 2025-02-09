@@ -11,8 +11,8 @@ function reloadContent() {
   // var newUrl = currentUrl.split("?")[0] + "?_=" + new Date().getTime();
 
   // // Reload the page with the new URL
-  // window.location.href = newUrl;
-  location.reload(true);
+  loadInvoices();
+  document.getElementById("myIframe").src =  "../general_3.php" + "?_=" + new Date().getTime();;
 }
 
 function loadInvoices() {
