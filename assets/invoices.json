@@ -8,10 +8,10 @@
         "name": "Lowell H. Domingueza",
         "address": "84 Spilman Street, Londo",
         "country": "Srilanka",
-        "email": "lowel@gmail.com"
+        "email": "lowela@gmail.com"
     },
     "payment_method": "Paypal, Western Union",
-    "total_amount": 385,
+    "total_amount": 375,
     "items": [
         {
             "Item": "Website Designer",
@@ -26,13 +26,6 @@
             "unit_price": 200,
             "quantity": 2,
             "total_price": 200
-        },
-        {
-            "Item": "e",
-            "Description": "e",
-            "unit_price": 1,
-            "quantity": 1,
-            "total_price": 10
         }
     ]
 }

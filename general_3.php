@@ -144,7 +144,7 @@
   <script src="assets/js/main.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      fetch('assets/invoices.json')
+      fetch('assets/invoices.json?v=' + new Date().getTime())
         .then(response => response.json())
         .then(data => {
           const invoice = data;

@@ -15,7 +15,7 @@ header('X-Frame-Options: SAMEORIGIN'); // Prevents embedding on external sites
     <meta http-Equiv="Cache-Control" Content="no-cache" />
     <meta http-Equiv="Pragma" Content="no-cache" />
     <meta http-Equiv="Expires" Content="0" />
-    <title>Edit Invoice</title>
+    <title>Cody Zea Invoice Manager</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.17/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="../assets/css/invoiceItemsManager.css">

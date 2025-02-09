@@ -25,9 +25,9 @@ function getInvoiceById($id)
 {
     $invoice = readInvoices();
 
-        if ($invoice['invoice_id'] == $id) {
-            return $invoice;
-        }
+    if ($invoice['invoice_id'] == $id) {
+        return $invoice;
+    }
     return null;
 }
 
@@ -81,33 +81,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'PUT' && isset($_GET['invoice_id']) && isset(
 
     $invoice = getInvoiceById($invoiceId);
     // Check if the invoice exists
-if ($invoice) {
-    // Update the item at the specified index
-    if (isset($invoice['items'][$itemIndex])) {
-        $invoice['items'][$itemIndex]['Item'] = $Item;
-        $invoice['items'][$itemIndex]['Description'] = $Description;
-        $invoice['items'][$itemIndex]['total_price'] = $total_price;
+    if ($invoice) {
+        // Update the item at the specified index
+        if (isset($invoice['items'][$itemIndex])) {
+            $invoice['items'][$itemIndex]['Item'] = $Item;
+            $invoice['items'][$itemIndex]['Description'] = $Description;
+            $invoice['items'][$itemIndex]['total_price'] = $total_price;
 
-        // Recalculate the total amount
-        $totalAmount = 0;
-        foreach ($invoice['items'] as $item) {
-            $totalAmount += $item['total_price'];
+            // Recalculate the total amount
+            $totalAmount = 0;
+            foreach ($invoice['items'] as $item) {
+                $totalAmount += $item['total_price'];
+            }
+
+            // Update the total amount in the invoice
+            $invoice['total_amount'] = $totalAmount;
+
+            // Save the updated invoice (you can use a function like saveInvoice())
+            saveInvoices($invoice);
+
+            // Respond with the updated invoice data
+            echo json_encode(['status' => 'success', 'invoice' => $invoice]);
+        } else {
+            echo json_encode(['status' => 'error', 'message' => 'Item not found']);
         }
-
-        // Update the total amount in the invoice
-        $invoice['total_amount'] = $totalAmount;
-
-        // Save the updated invoice (you can use a function like saveInvoice())
-        saveInvoices($invoice);
-
-        // Respond with the updated invoice data
-        echo json_encode(['status' => 'success', 'invoice' => $invoice]);
     } else {
-        echo json_encode(['status' => 'error', 'message' => 'Item not found']);
+        echo json_encode(['status' => 'error', 'message' => 'Invoice not found']);
     }
-} else {
-    echo json_encode(['status' => 'error', 'message' => 'Invoice not found']);
-}
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'DELETE' && isset($_GET['invoice_id']) && isset($_GET['action']) && $_GET['action'] === 'delete-item') {
@@ -120,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE' && isset($_GET['invoice_id']) && iss
     if (is_array($invoice) && isset($invoice['items']) && is_array($invoice['items'])) {
         // Check if the item index is valid
         if (isset($invoice['items'][$itemIndex])) {
-           
+
             // Remove the item at the given index
             array_splice($invoice['items'], $itemIndex, 1);
 
